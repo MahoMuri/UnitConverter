@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/m_10"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/m_10"
+                android:layout_marginTop="36dp"
+                android:text="@string/title"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                tools:text="Unit Converter" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/h_48"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/numberInputTop"
+                    android:layout_width="210dp"
+                    android:layout_height="@dimen/h_48"
+                    android:layout_margin="@dimen/m_10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/editTextHint"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="24sp"
+                    android:background="@drawable/border_black"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/unitTop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/switchButton"
+                android:layout_width="@dimen/h_48"
+                android:layout_height="@dimen/h_48"
+                android:layout_margin="@dimen/m_10"
+                android:contentDescription="@string/swapbutton"
+                android:onClick="switchUnits"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_switch_units" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/numberInputBottom"
+                    android:layout_width="210dp"
+                    android:layout_height="@dimen/h_48"
+                    android:layout_margin="@dimen/m_10"
+                    android:background="@drawable/border_black"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/unitBottom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/m_10"
+                android:onClick="convertUnits"
+                android:text="@string/btn_name" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

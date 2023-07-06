@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UnitConverter</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title">Unit Converter\n</string>
+    <string name="btn_name">Convert</string>
+    <string name="editTextHint">Number</string>
+    <string name="swapbutton">swapButton</string>
+</resources>

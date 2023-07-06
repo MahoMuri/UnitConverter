@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="m_10">10dp</dimen>
+    <dimen name="h_48">48dp</dimen>
+    <dimen name="textWidth">30dp</dimen>
+
+    <dimen name="text_header">40sp</dimen>
+</resources>
